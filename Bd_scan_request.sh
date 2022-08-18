@@ -15,9 +15,7 @@
 ##  Contact: mart@altacom.eu                                                                                                          ##
 ##                                                                                                                                    ##
 ##  Copyright: MIT License                                                                                                            ##
-##  https://github.com/martroben/Bd_scan_Request                                                                                      ##
-##                                                                                                                                    ##
-##  Contact: mart@altacom.eu                                                                                                          ##
+##  https://github.com/martroben/Bd_scan_Request                                                                                      ##                                                                                                       ##
 ##                                                                                                                                    ##
 ########################################################################################################################################
 
