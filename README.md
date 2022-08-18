@@ -19,6 +19,7 @@ sudo crontab -e
 # Bitdefender restart prompt
 3 * * * * export DISPLAY=:0 && /opt/management_scripts/Bd_scan_request.sh
 ```
+[Additional info](https://askubuntu.com/questions/85612/how-to-call-zenity-from-cron-script)
 
 
 ## Screenshots
@@ -32,7 +33,7 @@ Script increases the frequency of prompting, depending on how much time has pass
 
 $frequency\ parameter = 1 + 2^{\[6 - \frac 2 7\ \cdot\ days\ since\ last\ scan\]}\ \ \ \text{(only the whole number part is kept)}$
 
-(current hour of day + 1) is divided by the frequency parameter. Whenever the remainder is 0, user is prompted to start a scan.
+(current hour of day + 1) is divided by the frequency parameter. Whenever the remainder (modulo) is 0, user is prompted to start a scan.
 
 Eg. if 14 days have passed since last scan the frequency parameter takes the following value:
 
