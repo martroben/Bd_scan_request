@@ -51,7 +51,7 @@ prompt_timeout=$(echo "3600 * 24 / (23 / $frequency_parameter + 1)" | bc)
 # Check if it's the correct hour of the day to display the dialogue
 # Ask user to start a full scan
 active_scan=$(echo $(sudo $Bd_install_location/bin/bduitool get scantasks) | grep -iPo ${Bd_full_scan_identifier}.*running)
-current_hour=$(date +%H)
+current_hour=$(( $(date +%H) + 1 ))
 
 if [[ $(($current_hour % $frequency_parameter)) -eq 0 && -z $active_scan ]]; then
 
