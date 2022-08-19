@@ -1,7 +1,8 @@
 # Bitdefender scan request
-- Bitdefender is known to have fairly high resource usage during full scans.
-- This is a Linux shell script that periodically requests Bitdefender scans from user, to give user more control over when the scans occur.
+- Bitdefender is known to have fairly high resource usage during full scans. They are currently working on improving it.
+- Meanwhile, this is a Linux shell script that periodically requests Bitdefender scans from user, to give user more control over when the scans occur.
 - The script is meant to be run as an hourly cron task.
+- It makes sense for Linux Desktops (not so much for servers).
 - User can postpone the scan forever, but the script keeps increasing the frequency of prompts up to a maximum of once per hour (after ~16 days).
 - Prompt timeouts adjust so that there will never be more than two concurrent prompts.
 - Upon running the scan, the script also informs user on how to stop a scan in case it was started accidentally.
@@ -45,7 +46,7 @@ That means that user is prompted at 9 o'clock, 14 o'clock, 19 o'clock (if the de
 ## Dependencies
 - Bash Calculator for math. `bc -v` to check.
 - Zenity for displaying user dialogues. `zenity --version` to check.
-
+- Bitdefender Linux agent v7+
 
 ## Cautions
 - Due to zenity's limitations, users are liable to start full scans by accidentally pressing return when a prompt appears. Using yad instead of zenity might provide more control over how prompt windows react to accidental keystrokes.
