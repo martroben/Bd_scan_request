@@ -46,7 +46,7 @@ That means that user is prompted at 9 o'clock, 14 o'clock, 19 o'clock (if the de
 ## Dependencies
 - Bash Calculator for math. `bc -v` to check.
 - Zenity for displaying user dialogues. `zenity --version` to check.
-- Bitdefender Linux agent v7+
+- Bitdefender Linux agent v7+ `sudo /opt/bitdefender-security-tools/bin/bduitool get ps` to check.
 
 ## Cautions
 - Due to zenity's limitations, users are liable to start full scans by accidentally pressing return when a prompt appears. Using yad instead of zenity might provide more control over how prompt windows react to accidental keystrokes.
