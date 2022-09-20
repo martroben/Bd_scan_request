@@ -2,7 +2,7 @@
 
 ########################################################################################################################################
 ##                                                                                                                                    ##
-##  Script name: Bd_scan_request.R                                                                                                    ##
+##  Script name: Bd_scan_request.sh                                                                                                   ##
 ##  Purpose of script: Prompt Linux users to start a Bitdefender scan. Meant to be run as a hourly cron job.                          ##
 ##                     Frequency of promopts increases as time since last scan increases.                                             ##
 ##                                                                                                                                    ##
