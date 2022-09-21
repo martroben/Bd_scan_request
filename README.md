@@ -9,19 +9,20 @@
 
 
 ## Usage
-Add the following task to root cron (has to be root cron, because Bitdefender components require elevated privileges to access).
-```Shell
-sudo crontab -e
-```
+- Add the following task to root cron (has to be root cron, because Bitdefender components require elevated privileges to access).
+  ```Shell
+  sudo crontab -e
+  ```
 
-```Shell
-# Edit this file to introduce tasks to be run by cron.
+  ```Shell
+  # Edit this file to introduce tasks to be run by cron.
+  
+  # Bitdefender restart prompt
+  3 * * * * export DISPLAY=:0 && /opt/management_scripts/Bd_scan_request.sh
+  ```
+  [Additional info](https://askubuntu.com/questions/85612/how-to-call-zenity-from-cron-script)
 
-# Bitdefender restart prompt
-3 * * * * export DISPLAY=:0 && /opt/management_scripts/Bd_scan_request.sh
-```
-[Additional info](https://askubuntu.com/questions/85612/how-to-call-zenity-from-cron-script)
-
+- Don't forget to place a copy of Bd_scan_request.sh to folder /opt/management_scripts/
 
 ## Screenshots
 <img src="https://user-images.githubusercontent.com/87522742/185491863-5f622c3c-9841-4784-a81d-130b9b12cf9d.png" width="400">
