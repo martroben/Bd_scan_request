@@ -49,4 +49,4 @@ That means that user is prompted at 9 o'clock, 14 o'clock, 19 o'clock (if the de
 - Bitdefender Linux agent v7+ `sudo /opt/bitdefender-security-tools/bin/bduitool get ps` to check.
 
 ## Cautions
-- Due to zenity's limitations, users are liable to start full scans by accidentally pressing return when a prompt appears. Using yad instead of zenity might provide more control over how prompt windows react to accidental keystrokes.
+- Due to zenity's limitations, users are liable to start full scans by accidentally pressing return when a prompt appears. Using yad instead of zenity might provide more control over how prompt windows react to accidental keystrokes. I used zenity because it's included in Ubuntu.
